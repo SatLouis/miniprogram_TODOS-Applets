@@ -1,0 +1,79 @@
+/* pages/todos/todos.wxss */
+.container {
+  border-top: 4rpx solid #e0e0e0;
+  padding: 5rpx;
+  align-items: inherit;
+}
+
+.header {
+  display: flex;
+  margin: 20rpx;
+  padding: 20rpx;
+  align-items: center;
+  border-radius: 10rpx;
+  border: 1rpx solid #e0e0e0;
+  box-shadow: 0 0 5rpx #e0e0e0;
+}
+
+.header image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+
+.todos {
+  margin: 5rpx 20rpx;
+  border-radius: 10rpx;
+  border: 1rpx solid #e0e0e0;
+  box-shadow: 0 0 5rpx #e0e0e0;
+  font-size: 30rpx;
+  color: #444;
+}
+
+.todos .item {
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #e0e0e0;
+}
+
+.todos .item:last-child {
+  border-bottom: none;
+}
+
+.todos .item text {
+  flex: 1;
+  margin-left: 20rpx;
+}
+
+.todos .item text.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.footer {
+  font-size: 30rpx;
+  margin: 12rpx;
+  display: flex;
+  justify-content: space-around;
+}
+
+.show {
+  margin: 60rpx;
+  text-align: left;
+  font-size: 48rpx;
+  font-style: italic;
+}
+
+.show .title {
+  margin: 20rpx;
+  display: block;
+}
+
+.show .info {
+  display: block;
+  margin: 20rpx;
+  padding-top: 20rpx;
+  font-size: 40rpx;
+  font-weight: lighter;
+}

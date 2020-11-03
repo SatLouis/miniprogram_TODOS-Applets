@@ -1,0 +1,25 @@
+<!--pages/todos/todos.wxml-->
+<view class="container">
+  <view class="header">
+    <image src="/images/plus.png" bindtap="addItemHandle"></image>
+    <input type="text" placeholder="Anything here..." value="{{input}}" bindinput="inputHandle" bindconfirm="addItemHandle" />
+  </view>
+  <block wx:if="{{list.length}}">
+    <view class="todos">
+      <view class="item" wx:for="{{list}}" wx:key='id'>
+        <icon data-index="{{index}}" bindtap="toggleStateHandle" type="{{item.completed?'success':'circle'}}"></icon>
+        <text class="{{item.completed?'completed':''}}">{{item.title}}</text>
+        <icon type="clear" size="18" bindtap="deleleItemHandel" data-index="{{index}}"></icon>
+      </view>
+    </view>
+    <view class="footer">
+      <text bindtap="toggleAllCompletedHandle">Toggle all</text>
+      <text wx:if="{{countLeft}}">{{countLeft}} {{countLeft > 1 ? "items":"item"}} left</text>
+      <text bindtap="clearCompletedAllHandle">clear completed</text>
+    </view>
+  </block>
+  <view wx:else class="show">
+    <text class="title">Congratulations!</text>
+    <text class="info">There is no remaining TODOS</text>
+  </view>
+</view>
